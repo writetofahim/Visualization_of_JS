@@ -1,8 +1,8 @@
-function changeColor(callback) {
-    var box = document.getElementById('box');
+function animateCircle(callback) {
+    var circle = document.getElementById('circle');
     
     // Add animation effect
-    box.style.backgroundColor = 'blue';
+    circle.style.transform = 'scale(2.5)';
     
     // Simulate asynchronous operation
     setTimeout(function() {
@@ -12,12 +12,12 @@ function changeColor(callback) {
   }
   
   function callbackFunction() {
-    var box = document.getElementById('box');
+    var circle = document.getElementById('circle');
     
-    // Change the background color back to red
-    box.style.backgroundColor = 'red';
+    // Reset the scale to the original size
+    circle.style.transform = 'scale(1)';
   }
   
-  // Call the changeColor function with the callback
-  changeColor(callbackFunction);
+  // Call the animateCircle function with the callback
+  animateCircle(callbackFunction);
   
